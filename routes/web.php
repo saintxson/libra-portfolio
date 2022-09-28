@@ -4,9 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'Book\IndexController');
 
 Route::group(['namespace' => 'Book', 'prefix' => 'books'], function () {
     Route::get('/', 'IndexController')->name('book.index');
